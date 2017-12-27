@@ -1,4 +1,9 @@
 <?php
+/**
+ * DB SYSTEM
+ *
+ * @author mohamed amr
+ */
 class Session
 {
     public static function Start()
