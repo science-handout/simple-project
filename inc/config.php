@@ -4,7 +4,7 @@
  *
  * @author mohamed amr
  */
-define('DBNAME','');
+define('DBNAME','test');
 define('HOST','localhost');
 define('USER','root');
 define('PASS','');
