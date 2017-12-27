@@ -4,9 +4,12 @@
  *
  * @author mohamed amr
  */
+$message = '';
 // ------------------ create table ---------------------
-define('TABLENAME','');
-//-----------------------file require -------------------------
-require 'inc/create.php';
+if(isset($_POST['table'])){
+   $table = $_POST['table'];
+    define('TABLENAME',"$table");
+    require 'inc/create.php';
+}
 //-------------------------end ------------------------------
-
+require_once "inc/Design/create.html";

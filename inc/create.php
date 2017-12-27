@@ -30,16 +30,16 @@ if(TABLENAME) {
                 $current .= "require_once 'database/" . TABLENAME . ".php';";
                 file_put_contents($file, $current . "\n");
        }
-               echo 'The file was copied successfully';
+               $message = 'The file was copied successfully';
 
         } else {
-            echo 'The file dont copy';
+            $message = 'The file dont copy';
         }
 
     } else {
-        echo ' the file exists';
+        $message = ' the file exists';
     }
 }else{
-    echo ' the table name is not exist';
+    $message = ' the table name is not exist';
 }
 //--------------------------end ------------------------------
