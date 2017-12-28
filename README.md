@@ -1,4 +1,5 @@
 # simple-db-project
+[![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/devmohamedamr/simple-db-project/)
 
 > السلام عليكم يرجي اتباع الخطوات لكي يتم تجهيز المشروع
 
