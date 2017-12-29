@@ -4,6 +4,7 @@
  *
  * @author mohamed amr
  */
+$session =  new Session();
 class Session
 {
     public static function Start()
@@ -19,6 +20,7 @@ class Session
         if(isset($_SESSION[$key]))
             return $_SESSION[$key];
     }
+
     public static function Stop()
     {
         session_destroy();
