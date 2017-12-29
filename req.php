@@ -11,3 +11,4 @@ require_once 'inc/System.php';
 require_once 'inc/Session.php';
 //****************database file **************************
 require_once 'database/user.php';
+require_once 'database/admin.php';
