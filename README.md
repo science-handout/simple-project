@@ -21,7 +21,7 @@
 ```sh
  كما موضح فى الصورة
 ```
-[<img src="https://github.com/devmohamedamr/simple-db-project/blob/master/img.png" align="center" width="500" alt="">](https://github.com/devmohamedamr/simple-db-project/)
+[<img src="https://github.com/devmohamedamr/simple-db-project/blob/master/inc/Design/img.png" align="center" width="500" alt="">](https://github.com/devmohamedamr/simple-db-project/)
 
 
 ## رخصة المشروع
