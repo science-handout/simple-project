@@ -6,71 +6,99 @@
  * @author mohamed amr
  */
 
-if($_POST['select'] == 'table') {
+class create{
 
-    if (TABLENAME) {
-//-------------------------------------
-        $fn = 'inc/Db.php';
-        $newfn = "database/" . TABLENAME . ".php";
-//-------------------------------------
 
-        if (!file_exists($newfn)) {
-            if (copy($fn, $newfn)) {
-                $oldMessage = '$table';
-                $deletedFormat = TABLENAME;
-                $op = '$ob';
-                $neob = '$' . TABLENAME;
-                $str = file_get_contents($newfn);
 
-                $str = str_replace("$oldMessage", "$deletedFormat", $str);
-                $str = str_replace("$op", "$neob", $str);
-                $res1 = file_put_contents($newfn, $str);
 
-                if ($res1) {
-                    $file = 'req.php';
-                    $current = file_get_contents($file);
-                    $current .= "require_once 'database/" . TABLENAME . ".php';";
-                    file_put_contents($file, $current . "\n");
-                }
-                $message = 'The file was copied successfully';
-
-            } else {
-                $message = 'The file dont copy';
+    function __construct($type,$file)
+    {
+        $fileName = $this->CheckType($type, $file);
+        $basicFile = $this->Base($type);
+        $this->GenerateFile($fileName, $basicFile);
+        if ($type == 'table') {
+            $res = $this->GenerateTable($file,$fileName);
+            if ($res) {
+                $this->includeFile('req.php', 'database',$file);
             }
-
-        } else {
-            $message = ' the file exists';
         }
-    } else {
-        $message = ' the table name is not exist';
-    }
-}elseif($_POST['select'] == 'admin'){
-
-    //-------------------------------------
-    $fn = 'inc/adminFile.php';
-    $newfn = "Admin/" . TABLENAME . ".php";
-    //-------------------------------------
-
-    if (!file_exists($newfn)) {
-        copy($fn, $newfn);
-        $message = ' the file admin created';
-    }else{
-        $message = ' the file exists';
     }
 
-}elseif($_POST['select'] == 'page'){
 
-    //-------------------------------------
-    $fn = 'inc/homeFile.php';
-    $newfn =  TABLENAME . ".php";
-    //-------------------------------------
 
-    if (!file_exists($newfn)) {
-        copy($fn, $newfn);
-        $message = ' the file page created';
-    }else{
-        $message = ' the file exists';
+
+
+
+
+    function CheckType($type,$file){
+        if($type == 'admin') {
+            $file = "Admin/" . $file . ".php";
+        }elseif($type == 'page'){
+            $file = $file . ".php";
+        }elseif($type == 'table'){
+            $file = "database/" . $file . ".php";
+        }
+        return $file;
     }
 
-}
+
+
+
+
+
+
+
+    function Base($type){
+       return "inc/{$type}File.php";
+    }
+
+
+
+
+
+
+    function GenerateFile($file,$basicFile){
+
+        if (!file_exists($file)) {
+            copy($basicFile, $file);
+            return " the file created";
+        }else{
+           return ' the file exists';
+        }
+    }
+
+
+
+
+
+
+
+    function GenerateTable($fileName,$fileLocation){
+
+        $tableName = '$table';
+        $replaceName = $fileName;
+        $objectName = '$ob';
+        $replaceObject = '$' . $fileName;
+        $str = file_get_contents($fileLocation);
+        $str = str_replace("$tableName", "$replaceName", $str);
+        $str = str_replace("$objectName", "$replaceObject", $str);
+        return file_put_contents($fileLocation, $str);
+    }
+
+
+
+
+
+
+
+    function includeFile($reqFile,$location,$fileName){
+        $current = file_get_contents($reqFile);
+        $current .= "require_once '$location/" . $fileName . ".php';";
+        file_put_contents($reqFile, $current . "\n");
+    }
+
+
 //--------------------------end ------------------------------
+}
+
+
