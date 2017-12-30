@@ -2,7 +2,7 @@
 
 /**
  * DB SYSTEM
- * name : create file class 
+ * name : create file class
  * @author mohamed amr
  */
 

@@ -13,3 +13,6 @@ if(!$session->Get('admin')){
     exit('you are not login');
 }
 
+
+
+?>
