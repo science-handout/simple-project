@@ -2,14 +2,17 @@
 
 /**
  * DB SYSTEM
- *
+ * name : create file class 
  * @author mohamed amr
  */
 
 class create{
 
 
-
+    /**
+     * @param $type
+     * @param $file
+     */
 
     function __construct($type,$file)
     {
@@ -25,10 +28,12 @@ class create{
     }
 
 
-
-
-
-
+    /**
+     * check type to return file path
+     * @param $type
+     * @param $file
+     * @return string
+     */
 
     function CheckType($type,$file){
         if($type == 'admin') {
@@ -42,20 +47,23 @@ class create{
     }
 
 
-
-
-
-
-
+    /**
+     *  return base file
+     * @param $type
+     * @return string
+     */
 
     function Base($type){
        return "inc/{$type}File.php";
     }
 
 
-
-
-
+    /**
+     * generate file and check if file exist
+     * @param $file
+     * @param $basicFile
+     * @return string
+     */
 
     function GenerateFile($file,$basicFile){
 
@@ -68,10 +76,12 @@ class create{
     }
 
 
-
-
-
-
+    /**
+     * generate table class
+     * @param $fileName
+     * @param $fileLocation
+     * @return int
+     */
 
     function GenerateTable($fileName,$fileLocation){
 
@@ -86,8 +96,12 @@ class create{
     }
 
 
-
-
+    /**
+     * to require table class in req file
+     * @param $reqFile
+     * @param $location
+     * @param $fileName
+     */
 
 
 
