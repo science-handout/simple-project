@@ -5,6 +5,7 @@
  * @author mohamed amr
  */
 require_once "../req.php";
+
 $session->Start();
 
 if($session->Get('admin')){
@@ -24,7 +25,6 @@ if(isset($_POST['password'])){
         header('Location: Admin/home.php');
     }
 }
-
 
 
 
