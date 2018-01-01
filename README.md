@@ -23,6 +23,14 @@
 ```
 [<img src="https://github.com/devmohamedamr/simple-db-project/blob/master/inc/Design/img.png" align="center" width="500" alt="">](https://github.com/devmohamedamr/simple-db-project/)
 
+## الاستخدام 
+```sh
+الدخول عل المسار التالي 
+ inc->db->config.php
+تكتب اسم قاعدة البيانات  مكان كلمة هنا 
+define('DBNAME','هنا');
+```
+
 
 ## رخصة المشروع
 
