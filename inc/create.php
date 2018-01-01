@@ -18,11 +18,15 @@ class create{
     {
         $fileName = $this->CheckType($type, $file);
         $basicFile = $this->Base($type);
-        $this->GenerateFile($fileName, $basicFile);
-        if ($type == 'table') {
-            $res = $this->GenerateTable($file,$fileName);
-            if ($res) {
-                $this->includeFile('req.php', 'database',$file);
+        $generate_res = $this->GenerateFile($fileName, $basicFile);
+        if($generate_res) {
+            if ($type == 'table') {
+                $res = $this->GenerateTable($file, $fileName);
+                if ($res) {
+                    $this->includeFile('req.php', 'database', $file);
+                }
+            }elseif($type == 'admin'){
+                $this->GenerateNav($file,$type);
             }
         }
     }
@@ -44,6 +48,18 @@ class create{
             $file = "database/" . $file . ".php";
         }
         return $file;
+    }
+
+
+    function GenerateNav($title,$type){
+
+        if($type == 'admin'){
+            $current = file_get_contents("Admin/AdminDesign/nav.php");
+            $current .= "<li class='nav-item'>";
+            $current .= "<a class='nav-link' href='{$title}.php'>{$title}</a>";
+            $current .= "</li>";
+            file_put_contents("Admin/AdminDesign/nav.php", $current . "\n");
+        }
     }
 
 
@@ -69,9 +85,9 @@ class create{
 
         if (!file_exists($file)) {
             copy($basicFile, $file);
-            return " the file created";
+            return true;
         }else{
-           return ' the file exists';
+           return false;
         }
     }
 
