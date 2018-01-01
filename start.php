@@ -6,7 +6,7 @@
  */
 require 'inc/create.php';
 $message = '';
-// ------------------ create table ---------------------
+// ------------------ create anything ---------------------
 if(isset($_POST['table'])){
 
    $table = $_POST['table'];
