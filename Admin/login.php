@@ -5,6 +5,7 @@
  * @author mohamed amr
  */
 require_once "../req.php";
+
 $session->Start();
 
 if($session->Get('admin')){
@@ -21,11 +22,11 @@ if(isset($_POST['password'])){
     $data = $user->select("WHERE `username` = $username && `password` = $password");
     if(!empty($data)){
         $session->Set('admin',$data);
-        header('Location: Admin/home.php');
+        if (!file_exists('Admin/home.php')) {
+            header('Location: Admin/home.php');
+        }
     }
 }
 
-
-
-
+require_once "AdminDesign/login.html";
 ?>
