@@ -7,8 +7,7 @@
  * @author syam
  */
 
-
-class mysqlDB
+class mysqlDB implements  DB
 {
     private $connection;
     private $last; //last query [result]
