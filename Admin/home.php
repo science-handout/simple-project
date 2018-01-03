@@ -7,6 +7,8 @@
 require_once "../req.php";
 $session->Start();
 
+$Adminpath = "AdminDesign/files/";
+
 
 if(!$session->Get('admin')){
 
@@ -15,7 +17,6 @@ if(!$session->Get('admin')){
 
 if($_GET['action'] == 'add'){
 //add
-
 
 
 }elseif($_GET['action'] == 'update'){
@@ -34,6 +35,7 @@ if($_GET['action'] == 'add'){
 
 }
 require_once "AdminDesign/header.html";
+require_once "AdminDesign/footer.html";
 ?>
 
 
@@ -41,5 +43,4 @@ require_once "AdminDesign/header.html";
 
 
 
-<?php require_once "AdminDesign/footer.html"; ?>
 
