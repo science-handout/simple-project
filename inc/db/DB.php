@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * DB SYSTEM
+ * interface database
+ * @author mohamed amr
+ */
 interface DB {
 
     public function dbconnect();

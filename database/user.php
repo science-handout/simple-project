@@ -38,7 +38,7 @@ function delete($id)
 
 function select($extra='')
 {
-    System::Get('db')->Execute("SELECT * FROM `user` $extra");
+   $data = System::Get('db')->Execute("SELECT * FROM `user` $extra");
 
     if(System::Get('db')->AffectedRows()>0)
         return System::Get('db')->GetRows();
