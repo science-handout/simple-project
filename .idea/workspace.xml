@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7398e4-e57f-4e21-acbf-cc864bd699ff" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/engin/collection/createBack.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/engin/collection/createDB.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/engin/collection/createFront.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/engin/collection/createTable.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/engin/index.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/inc/helper.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/files/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/layout/Public/CSS/bootstrap.min.css" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/files/css/dashboard.css" afterPath="$PROJECT_DIR$/layout/Public/CSS/dashboard.css" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/files/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/layout/Public/JS/bootstrap.min.js" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/files/js/jquery-slim.min.js" afterPath="$PROJECT_DIR$/layout/Public/JS/jquery-slim.min.js" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/files/js/popper.min.js" afterPath="$PROJECT_DIR$/layout/Public/JS/popper.min.js" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/footer.html" afterPath="$PROJECT_DIR$/layout/Back/footer.html" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/header.html" afterPath="$PROJECT_DIR$/layout/Back/header.html" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/login.html" afterPath="$PROJECT_DIR$/layout/Back/login.html" />
-      <change beforePath="$PROJECT_DIR$/Admin/AdminDesign/nav.php" afterPath="$PROJECT_DIR$/layout/Back/nav.php" />
-      <change beforePath="$PROJECT_DIR$/Admin/home.php" afterPath="$PROJECT_DIR$/Admin/home.php" />
-      <change beforePath="$PROJECT_DIR$/WebFiles/style.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/inc/Design/assets/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/inc/Design/assets/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/inc/Design/assets/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/inc/Design/create.html" afterPath="$PROJECT_DIR$/engin/master/creatorDesign/create.html" />
-      <change beforePath="$PROJECT_DIR$/inc/Design/img.png" afterPath="$PROJECT_DIR$/engin/master/creatorDesign/img.png" />
-      <change beforePath="$PROJECT_DIR$/inc/Design/sh.png" afterPath="$PROJECT_DIR$/engin/master/creatorDesign/sh.png" />
-      <change beforePath="$PROJECT_DIR$/inc/base/adminFile.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/inc/base/pageFile.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/inc/base/tableFile.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/inc/create.php" afterPath="$PROJECT_DIR$/engin/collection/create.php" />
-      <change beforePath="$PROJECT_DIR$/req.php" afterPath="$PROJECT_DIR$/req.php" />
-      <change beforePath="$PROJECT_DIR$/start.php" afterPath="" />
     </list>
     <ignored path="simple-db-project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -125,7 +95,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1552" />
@@ -244,7 +214,7 @@
       <workItem from="1514982322726" duration="4915000" />
       <workItem from="1515010026140" duration="205000" />
       <workItem from="1515012096911" duration="3019000" />
-      <workItem from="1515075603647" duration="5576000" />
+      <workItem from="1515075603647" duration="5653000" />
     </task>
     <task id="LOCAL-00001" summary="add&#10;">
       <created>1514398619976</created>
@@ -257,12 +227,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13715000" />
+    <option name="totallyTimeSpent" value="13792000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18474758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18474758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -270,7 +240,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991204" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
