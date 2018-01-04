@@ -13,5 +13,6 @@ require_once 'inc/db/mysql.php';
 require_once 'inc/db/PdoDB.php';
 require_once 'inc/db/System.php';
 require_once 'inc/session/Session.php';
+require_once 'inc/helper.php';
 //****************database file **************************
 require_once 'database/user.php';

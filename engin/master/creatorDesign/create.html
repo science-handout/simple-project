@@ -4,16 +4,16 @@
     <title>Create</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="inc/Design/assets/bootstrap.min.css">
-    <script src="inc/Design/assets/jquery.js"></script>
-    <script src="inc/Design/assets/bootstrap.js"></script>
+    <link rel="stylesheet" href="../layout/Public/CSS/bootstrap.min.css">
+    <script src="../layout/Public/JS/jquery-slim.min.js"></script>
+    <script src="../layout/Public/JS/bootstrap.min.js"></script>
 </head>
 <body>
 
 <div class="container" style="margin-top: 49px;">
     <h3><?php echo $message; ?></h3>
     <div class="panel panel-default col-md-8">
-    <form class="form-horizontal" method="post" style="margin-top: 16px;" action="start.php">
+    <form class="form-horizontal" method="post" style="margin-top: 16px;" action="index.php">
         <div class="form-group">
             <label class="control-label col-sm-2" for="table"> name:</label>
             <div class="col-md-5">
@@ -24,9 +24,9 @@
             <label class="control-label col-sm-2" for="table">select:</label>
             <div class="col-md-5">
             <select class="form-control" name="select">
-                <option value="table">Table</option>
-                <option value="admin">Admin page</option>
-                <option value="page">Page</option>
+                <option value="Table">Table</option>
+                <option value="Back">Admin page</option>
+                <option value="Front">Page</option>
             </select>
             </div>
         </div>
