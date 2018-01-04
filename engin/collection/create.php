@@ -20,12 +20,12 @@ class create{
         $basicFile = $this->Base($type);
         $generate_res = $this->GenerateFile($fileName, $basicFile);
         if($generate_res) {
-            if ($type == 'table') {
+            if ($type == 'Table') {
                 $res = $this->GenerateTable($file, $fileName);
                 if ($res) {
-                    $this->includeFile('req.php', 'database', $file);
+                    $this->includeFile('../req.php', 'database', $file);
                 }
-            }elseif($type == 'admin'){
+            }elseif($type == 'Back'){
                 $this->GenerateNav($file,$type);
             }
         }
@@ -40,12 +40,12 @@ class create{
      */
 
     function CheckType($type,$file){
-        if($type == 'admin') {
-            $file = "Admin/" . $file . ".php";
-        }elseif($type == 'page'){
-            $file = $file . ".php";
-        }elseif($type == 'table'){
-            $file = "database/" . $file . ".php";
+        if($type == 'Back') {
+            $file = "../Admin/" . $file . ".php";
+        }elseif($type == 'Front'){
+            $file = '../../'.$file . ".php";
+        }elseif($type == 'Table'){
+            $file = "../database/" . $file . ".php";
         }
         return $file;
     }
@@ -53,12 +53,12 @@ class create{
 
     function GenerateNav($title,$type){
 
-        if($type == 'admin'){
-            $current = file_get_contents("Admin/AdminDesign/nav.php");
+        if($type == 'Back'){
+            $current = file_get_contents("../layout/Back/nav.php");
             $current .= "<li class='nav-item'>";
             $current .= "<a class='nav-link' href='{$title}.php'>{$title}</a>";
             $current .= "</li>";
-            file_put_contents("Admin/AdminDesign/nav.php", $current . "\n");
+            file_put_contents("../layout/Back/nav.php", $current . "\n");
         }
     }
 
@@ -70,7 +70,7 @@ class create{
      */
 
     function Base($type){
-       return "inc/base/{$type}File.php";
+       return "collection/create{$type}.php";
     }
 
 
@@ -82,9 +82,8 @@ class create{
      */
 
     function GenerateFile($file,$basicFile){
-
         if (!file_exists($file)) {
-            copy($basicFile, $file);
+        copy($basicFile, $file);
             return true;
         }else{
            return false;
@@ -118,7 +117,6 @@ class create{
      * @param $location
      * @param $fileName
      */
-
 
 
     function includeFile($reqFile,$location,$fileName){
