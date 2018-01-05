@@ -27,7 +27,7 @@ class Upload
     protected $_fileTypesToEncrypt = array();
     protected $_customErrorMessages = array();
     /**
-     * Setting all the attributes with file data and check if it's single or multiple upload.
+     * Setting all the attributes with file data and check if it's single or multiple Upload.
      */
     public function __construct($input = null)
     {
@@ -74,7 +74,7 @@ class Upload
         return $sortedFiles;
     }
     /**
-     * This method allow the developer to set some rules for the upload process.
+     * This method allow the developer to set some rules for the Upload process.
      *
      * @param Array | $rules
      *
@@ -159,7 +159,7 @@ class Upload
         return $extensions;
     }
     /**
-     * Set the path directory where you want to upload the files(if not specfied file/files
+     * Set the path directory where you want to Upload the files(if not specfied file/files
      * will be uploaded to the current directory).
      *
      * @param String
@@ -175,7 +175,7 @@ class Upload
         return $this;
     }
     /**
-     * start the upload process
+     * start the Upload process
      *
      * @return Void
      */
@@ -345,7 +345,7 @@ class Upload
         return true;
     }
     /**
-     * This method checks if the upload was unsuccessful.
+     * This method checks if the Upload was unsuccessful.
      *
      * @return Boolean
      */
@@ -359,7 +359,7 @@ class Upload
         return false;
     }
     /**
-     * This method checks if the upload was successful.
+     * This method checks if the Upload was successful.
      *
      * @return Boolean
      */
@@ -430,7 +430,7 @@ class Upload
     {
         foreach($this->errorFiles() as $file)
         {
-            echo '<div class="alert alert-danger">couldn\'t upload ' . $file->name .'. '. $file->errorMessage . '</div>';
+            echo '<div class="alert alert-danger">couldn\'t Upload ' . $file->name .'. '. $file->errorMessage . '</div>';
         }
     }
     /**
