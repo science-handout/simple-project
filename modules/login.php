@@ -5,13 +5,11 @@
  * @author mohamed amr
  */
 require_once "../req.php";
+require_once "../App/permission/permission.php";
 
 $session->Start();
 
-if($session->Get('admin')){
-
-    $message = 'you are login';
-}
+new permission('admin','permission','','login','');
 
 
 if(isset($_POST['password'])){
@@ -26,12 +24,6 @@ if(isset($_POST['password'])){
             header('Location: modules/home.php');
         }
     }
-}
-if (!empty($message)){
-    require_once "../layout/Back/Errors/permission.html";
-    exit();
-}else{
-    require_once "../layout/Back/login.html";
 }
 
 ?>

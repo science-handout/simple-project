@@ -14,7 +14,7 @@ class permission {
 
 
     public function IsLogin($name){
-        if(!$this->session->Get($name)){
+        if($this->session->Get($name)){
             $res = true;
         }else{
             $res = false;
@@ -23,18 +23,36 @@ class permission {
     }
 
 
-    public function Display($error = '',$header = '',$content = '',$footer = ''){
-        if ($this->IsLogin()){
-            $message = 'you are not login';
-            require_once "../layout/Back/Errors/".$error.".html";
-            exit();
-        }else{
-            require_once "../layout/Back/".$header.".html";
-            ($content) ? require_once "../layout/Back/".$content.".html": '' ;
-            require_once "../layout/Back/".$footer.".html";
+    public function Display($error = '',$header = '',$content = '',$footer = '')
+    {
+
+        if ($content == 'login') {
+            if (!$this->IsLogin()) {
+                ($content) ? require_once "../layout/Back/" . $content . ".html" : '';
+            }else{
+                $message = 'you are login';
+                ($error) ? require_once "../layout/Back/Errors/" . $error . ".html" : '';
+                exit();
+            }
+        }elseif ($content == 'logout'){
+
+            if (!$this->IsLogin()) {
+                ($content) ? require_once "../layout/Back/" . $content . ".html" : '';
+            }else{
+                $this->session->Stop();
+            }
+
+        } else {
+            if (!$this->IsLogin()) {
+                $message = 'you are not login';
+                ($error) ? require_once "../layout/Back/Errors/" . $error . ".html" : '';
+                exit();
+
+            } else {
+                ($header) ? require_once "../layout/Back/" . $header . ".html" : '';
+                ($content) ? require_once "../layout/Back/" . $content . ".html" : '';
+                ($footer) ? require_once "../layout/Back/" . $footer . ".html" : '';
+            }
         }
     }
-
-
-
 }
