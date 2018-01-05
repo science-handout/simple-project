@@ -5,12 +5,11 @@
  * @author mohamed amr
  */
 require_once "../req.php";
+require_once "../App/permission/permission.php";
 $session->Start();
 
-if(!$session->Get('admin')){
 
-    $message = 'you are not login';
-}
+new permission('admin','permission','header','','footer');
 
 if($_GET['action'] == 'add'){
 //add
@@ -31,14 +30,6 @@ if($_GET['action'] == 'add'){
 //index
 
 
-}
-if (!empty($message)){
-    require_once "../layout/Back/Errors/permission.html";
-    exit();
-}else{
-    require_once "../layout/Back/header.html";
-
-    require_once "../layout/Back/footer.html";
 }
 
 ?>

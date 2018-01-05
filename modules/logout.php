@@ -10,9 +10,15 @@ $session->Start();
 
 if(!$session->Get('admin')){
 
-    exit('you are not login');
+    $message ='you are not login';
 }
 
-$session->Stop();
 
+
+if (!empty($message)){
+    require_once "../layout/Back/Errors/permission.html";
+    exit();
+}else{
+    $session->Stop();
+}
 ?>

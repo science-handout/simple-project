@@ -10,7 +10,7 @@ $session->Start();
 
 if($session->Get('admin')){
 
-    exit('you are login');
+    $message = 'you are login';
 }
 
 
@@ -27,6 +27,11 @@ if(isset($_POST['password'])){
         }
     }
 }
+if (!empty($message)){
+    require_once "../layout/Back/Errors/permission.html";
+    exit();
+}else{
+    require_once "../layout/Back/login.html";
+}
 
-require_once "AdminDesign/login.html";
 ?>
