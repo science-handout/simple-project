@@ -6,10 +6,10 @@
  */
 require_once "../req.php";
 $session->Start();
-$Adminpath = "../layout/Public/";
+
 if(!$session->Get('admin')){
 
-    exit('you are not login');
+    $message = 'you are not login';
 }
 
 if($_GET['action'] == 'add'){
@@ -32,8 +32,16 @@ if($_GET['action'] == 'add'){
 
 
 }
-require_once "../layout/Back/header.html";
-require_once "../layout/Back/footer.html";
+
+if (!empty($message)){
+    require_once "../layout/Back/Errors/permission.html";
+    exit();
+}else{
+    require_once "../layout/Back/header.html";
+
+    require_once "../layout/Back/footer.html";
+}
+
 ?>
 
 

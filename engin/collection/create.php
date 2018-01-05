@@ -41,7 +41,7 @@ class create{
 
     function CheckType($type,$file){
         if($type == 'Back') {
-            $file = "../Admin/" . $file . ".php";
+            $file = "../modules/" . $file . ".php";
         }elseif($type == 'Front'){
             $file = '../../'.$file . ".php";
         }elseif($type == 'Table'){
