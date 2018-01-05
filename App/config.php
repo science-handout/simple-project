@@ -102,7 +102,7 @@ define('session',APP.'/session');
 /**
  * Upload path
  */
-define('upload',APP.'/Upload');
+define('upload',APP.'/upload');
 
 /**
  * validation path
