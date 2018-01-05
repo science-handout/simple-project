@@ -100,7 +100,7 @@ define('helper',APP.'/helper');
 define('session',APP.'/session');
 
 /**
- * upload path
+ * Upload path
  */
 define('upload',APP.'/upload');
 
