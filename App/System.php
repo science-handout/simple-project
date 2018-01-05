@@ -2,14 +2,9 @@
 
 /**
  * DB SYSTEM
- * singleton pattern to db
+ * singleton pattern
  * @author mohamed amr
  */
-
-// use PDO
-System::Set('db',new PdoDB());
-// use mysqli
-//System::Set('db',new mysqli());
 
 class System {
 
