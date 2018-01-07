@@ -125,7 +125,13 @@ class create{
         file_put_contents($reqFile, $current . "\n");
     }
 
-
+    /**
+     * Check connection string 
+     * Cheack if Exist DB 
+     */
+    public function CheckExisDB($host,$uname,$pass){
+    
+    }
 //--------------------------end ------------------------------
 }
 
