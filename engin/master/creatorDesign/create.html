@@ -88,67 +88,45 @@
                 
             </div>
             <div id="step-2">
-                <h2>Your Name</h2>
+                <h2>Database</h2>
                 <div id="form-step-1" role="form" data-toggle="validator">
                     <div class="form-group">
-                        <label for="name">Name:</label>
+                        <label for="name">Database Name:</label>
                         <input type="text" class="form-control" name="name" id="email" placeholder="Write your name" required>
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
             </div>
             <div id="step-3">
-                <h2>Your Address</h2>
+                <h2>Tabel</h2>
                 <div id="form-step-2" role="form" data-toggle="validator">
                     <div class="form-group">
-                        <label for="address">Address</label>
-                        <textarea class="form-control" name="address" id="address" rows="3" placeholder="Write your address..." required></textarea>
+                        <label for="address">Select Table</label>
+                        <select lass="form-control"  id="table" rows="3"  required name="select">
+                                <option value="Table">Table</option>
+                                <option value="Back">Admin page</option>
+                                <option value="Front">Page</option>
+                            </select>
+                
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
             </div>
             <div id="step-4" class="">
-                <h2>Terms and Conditions</h2>
-                <p>
-                    Terms and conditions: Keep your smile :) 
-                </p>
-                <div id="form-step-3" role="form" data-toggle="validator">
-                    <div class="form-group">
-                        <label for="terms">I agree with the T&C</label>
-                        <input type="checkbox" id="terms" data-error="Please accept the Terms and Conditions" required>  
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
+                <h2>Admin Page</h2>
+
                 
                 
             </div>
             <div id="step-5" class="">
-                <h2>Terms and Conditions</h2>
-                <p>
-                    Terms and conditions: Keep your smile :) 
-                </p>
-                <div id="form-step-3" role="form" data-toggle="validator">
-                    <div class="form-group">
-                        <label for="terms">I agree with the T&C</label>
-                        <input type="checkbox" id="terms" data-error="Please accept the Terms and Conditions" required>  
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
+                <h2>View Page</h2>
+
                 
                 
             </div>
             <div id="step-6" class="">
-                <h2>Terms and Conditions</h2>
-                <p>
-                    Terms and conditions: Keep your smile :) 
-                </p>
-                <div id="form-step-3" role="form" data-toggle="validator">
-                    <div class="form-group">
-                        <label for="terms">I agree with the T&C</label>
-                        <input type="checkbox" id="terms" data-error="Please accept the Terms and Conditions" required>  
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
+                <h2>View Page</h2>
+
                 
                 
             </div>
@@ -219,7 +197,7 @@
             $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
                    var elmForm = $("#form-step-" + stepNumber);
                     if (stepNumber == 0 ) {
-                    $.post("/engin/test.php",
+                    $.post("/engin/collection/checkstep.php",
                     {
                         hostn: $('#host').val(),
                         uname: $('#Uname').val(),
