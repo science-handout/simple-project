@@ -30,7 +30,7 @@ trait helper
         if(!empty(DB_CLASS)){
             if(DB_CLASS == 'pdo' || DB_CLASS == 'PDO'){
                 System::Set('db',new PdoDB());
-            }else{
+            }elseif(DB_CLASS == 'mysql' || DB_CLASS == 'mysqli' || DB_CLASS == 'Mysql'){
                 System::Set('db',new mysqlDB());
             }
         }

@@ -9,7 +9,7 @@ error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED);
 //----------core file ------------------------------------
 require_once APP.'/config.php';
 require_once db.'/DB.php';
-require_once db.'/DBcore/mysql.php';
+require_once db . '/DBcore/mysqlDB.php';
 require_once db.'/DBcore/PdoDB.php';
 require_once APP.'/System.php';
 require_once session.'/Session.php';
