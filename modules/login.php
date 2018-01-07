@@ -6,8 +6,7 @@
  */
 require_once "../req.php";
 require_once "../App/permission/permission.php";
-
-$session->Start();
+$session->start();
 
 new permission('admin','permission','','login','');
 
