@@ -7,6 +7,7 @@ class permission {
     public function __construct($session_name,$error,$header,$content,$footer)
     {
         $this->session = new Session();
+        //$this->session->start();
         $this->IsLogin($session_name);
         $this->Display($error,$header,$content,$footer);
 
