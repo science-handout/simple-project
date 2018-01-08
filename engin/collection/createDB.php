@@ -1,7 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: pc
- * Date: 1/4/2018
- * Time: 5:23 PM
+ * simple creation project
+ * @copyright Copyright (c) mohamed amr
+ * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */

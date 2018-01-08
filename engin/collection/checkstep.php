@@ -1,4 +1,9 @@
 <?php
+/**
+ * simple creation project
+ * @copyright Copyright (c) mohamed amr
+ * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
+ */
 $host = $_POST['hostn'];
 $userN = $_POST['uname'];
 $upass = $_POST['paswor'];
