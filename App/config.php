@@ -1,8 +1,8 @@
 <?php
 /**
- * DB SYSTEM
- * config file
- * @author mohamed amr
+ * simple creation project
+ * @copyright Copyright (c) mohamed amr
+ * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 
 
@@ -96,3 +96,19 @@ define('validation',APP.'/validation');
 //=================================
 
 define('DB_CLASS','pdo');
+
+//function Config($configName){
+//    if(isset($configName)){
+//        return $configName;
+//    }else{
+//        return APP;
+//    }
+//}
+//
+//function LoadConfig($configName,$path = ''){
+//    if(isset($configName) && isset($path)){
+//        $configName = include ("$path");
+//    }
+//    return $configName;
+//}
+

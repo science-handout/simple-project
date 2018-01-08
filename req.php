@@ -1,8 +1,8 @@
 <?php
 /**
- * DB SYSTEM
- * @author mohamed amr
- * @license MIT
+ * simple creation project
+ * @copyright Copyright (c) mohamed amr
+ * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED);
 

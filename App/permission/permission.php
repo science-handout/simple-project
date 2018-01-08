@@ -1,21 +1,26 @@
 <?php
-
+/**
+ * simple creation project
+ * @copyright Copyright (c) mohamed amr
+ * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
+ */
 class permission {
 
     public $session;
 
     public function __construct($session_name,$error,$header,$content,$footer)
     {
+
         $this->session = new Session();
-        //$this->session->start();
-        $this->IsLogin($session_name);
-        $this->Display($error,$header,$content,$footer);
+
+        $resLogin = $this->IsLogin($session_name);
+        $this->Display($error,$header,$content,$footer,$resLogin);
 
     }
 
 
     public function IsLogin($name){
-        if($this->session->Get($name)){
+        if($_SESSION[$name]){
             $res = true;
         }else{
             $res = false;
@@ -24,11 +29,12 @@ class permission {
     }
 
 
-    public function Display($error = '',$header = '',$content = '',$footer = '')
+
+    public function Display($error = '',$header = '',$content = '',$footer = '',$resLogin)
     {
 
         if ($content == 'login') {
-            if (!$this->IsLogin()) {
+            if (!$resLogin) {
                 ($content) ? require_once "../layout/Back/" . $content . ".html" : '';
             }else{
                 $message = 'you are login';
@@ -37,14 +43,14 @@ class permission {
             }
         }elseif ($content == 'logout'){
 
-            if (!$this->IsLogin()) {
+            if (!$resLogin) {
                 ($content) ? require_once "../layout/Back/" . $content . ".html" : '';
             }else{
                 $this->session->Stop();
             }
 
-        } else {
-            if (!$this->IsLogin()) {
+        } elseif($content != 'login' || $content != 'logout') {
+            if (!$resLogin) {
                 $message = 'you are not login';
                 ($error) ? require_once "../layout/Back/Errors/" . $error . ".html" : '';
                 exit();

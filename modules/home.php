@@ -1,12 +1,14 @@
 <?php
 /**
- * DB SYSTEM
- *
- * @author mohamed amr
+ * simple creation project
+ * @copyright Copyright (c) mohamed amr
+ * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 require_once "../req.php";
 require_once "../App/permission/permission.php";
-$session->Start();
+$session->start();
+//$data = array('user'=>'ahmed','pass'=>'123');
+//$session->set('admin',$data);
 
 
 new permission('admin','permission','header','','footer');
