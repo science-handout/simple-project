@@ -20,4 +20,4 @@ require_once upload.'/upload.php';
 //******************** init database type ****************
 helper::DataBaseType();
 //****************database file **************************
-require_once 'database/user.php';
+require_once '../../database/user.php';
