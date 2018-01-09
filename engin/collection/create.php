@@ -70,7 +70,7 @@ class create{
      */
 
     function Base($type){
-       return "collection/create{$type}.php";
+       return "collection/create{$type}.std";
     }
 
 
