@@ -5,6 +5,7 @@
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 
+
 class PdoDB implements DB{
 
     private $connection;

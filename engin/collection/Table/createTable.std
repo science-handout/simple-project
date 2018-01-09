@@ -44,4 +44,9 @@ public static function select($extra='')
     return [];
 }
 
+public function __call($name, $arguments)
+{
+    return "this function [ " .$name. " ] not found";
+}
+
 }

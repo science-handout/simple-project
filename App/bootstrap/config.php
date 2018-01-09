@@ -4,8 +4,6 @@
  * @copyright Copyright (c) mohamed amr
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
-
-
 //=================================
 //============== database =========
 //=================================
@@ -36,6 +34,8 @@ define('USER','root');
  */
 define('PASS','');
 
+
+
 //=================================
 //============== paths ===========
 //=================================
@@ -62,29 +62,27 @@ define('IMAG_PATH','../layout/Public/Images/');
  * app path
  */
 
-
-
 //=================================
 //============== files ============
 //=================================
-
-define('APP',dirname(__FILE__));
-
+$urlNow =  $_SERVER['REQUEST_URI'];
+$urlNow = explode('/', $urlNow);
+if($urlNow[2] == "modules"){
+    $app = "../App";
+    $db = "../database";
+}else{
+    $app = "App";
+    $db = "database";
+}
+define('APP',"$app");
+define('database',"$db");
 define('db',APP.'/db');
 define('helper',APP.'/helper');
 define('session',APP.'/session');
+define('system',APP.'/system');
 define('upload',APP.'/upload');
 define('validation',APP.'/validation');
 define('permission',APP.'/permission');
-
-//=================================
-//============== DBclass =========
-//=================================
-
-define('DB_CLASS','pdo');
-
-
-
 
 //function Config($configName){
 //    if(isset($configName)){
