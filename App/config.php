@@ -77,7 +77,6 @@ define('upload',APP.'/upload');
 define('validation',APP.'/validation');
 
 
-
 //=================================
 //============== DBclass =========
 //=================================

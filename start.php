@@ -6,7 +6,7 @@
  */
 error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING & ~E_DEPRECATED);
 
-//----------core file ------------------------------------
+//---------- core file ------------------------------------
 require_once APP . '/config.php';
 require_once db . '/DB.php';
 require_once db . '/DBcore/mysqlDB.php';
@@ -17,6 +17,7 @@ require_once helper . '/helper.php';
 require_once validation . '/Validation.php';
 require_once validation . '/translate/translate.php';
 require_once upload . '/upload.php';
+require_once APP."/permission/permission.php";
 //******************** init database type ****************
 helper::DataBaseType();
 //****************database file **************************

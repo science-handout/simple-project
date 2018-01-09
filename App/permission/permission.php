@@ -6,20 +6,17 @@
  */
 class permission {
 
-    public $session;
 
-    public function __construct($session_name,$error,$header,$content,$footer)
+    public static function start($session_name,$error,$header,$content,$footer)
     {
 
-        $this->session = new Session();
-
-        $resLogin = $this->IsLogin($session_name);
-        $this->Display($error,$header,$content,$footer,$resLogin);
+        $resLogin = permission::IsLogin($session_name);
+        permission::Display($error,$header,$content,$footer,$resLogin);
 
     }
 
 
-    public function IsLogin($name){
+    public static function IsLogin($name){
         if($_SESSION[$name]){
             $res = true;
         }else{
@@ -30,7 +27,7 @@ class permission {
 
 
 
-    public function Display($error = '',$header = '',$content = '',$footer = '',$resLogin)
+    public static function Display($error = '',$header = '',$content = '',$footer = '',$resLogin)
     {
 
         if ($content == 'login') {
@@ -46,7 +43,7 @@ class permission {
             if (!$resLogin) {
                 ($content) ? require_once "../layout/Back/" . $content . ".html" : '';
             }else{
-                $this->session->Stop();
+                session::Stop();
             }
 
         } elseif($content != 'login' || $content != 'logout') {
@@ -62,4 +59,6 @@ class permission {
             }
         }
     }
+
+
 }
