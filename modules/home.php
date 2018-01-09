@@ -33,7 +33,7 @@ if($_GET['action'] == 'add'){
 }else{
 //index
 
-//  helper::dd($user->select());
+  helper::dd($user->select());
 
 }
 

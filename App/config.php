@@ -65,7 +65,7 @@ define('IMAG_PATH','../layout/Public/Images/');
 
 
 //=================================
-//============== files =========
+//============== files ============
 //=================================
 
 define('APP',dirname(__FILE__));
@@ -75,7 +75,7 @@ define('helper',APP.'/helper');
 define('session',APP.'/session');
 define('upload',APP.'/upload');
 define('validation',APP.'/validation');
-
+define('permission',APP.'/permission');
 
 //=================================
 //============== DBclass =========

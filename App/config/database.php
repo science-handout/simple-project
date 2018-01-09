@@ -8,10 +8,10 @@
 
 return [
 
-    /**
-     *  DBTYPE is database type like mysql or sql server
-     *  mysql is a default
-     */
+
+     //  DBTYPE is database type like mysql or sql server
+     // mysql is a default
+
 
     'DBTYPE'=>'mysql',
 
