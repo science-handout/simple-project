@@ -22,9 +22,9 @@ class create{
         if($generate_res) {
             if ($type == 'Table') {
                 $res = $this->GenerateTable($file, $fileName);
-                if ($res) {
-                    $this->includeFile('../start.php', 'database', $file);
-                }
+//                if ($res) {
+//                    $this->includeFile('../start.php', 'database', $file);
+//                }
             }elseif($type == 'Back'){
                 $this->GenerateNav($file,$type);
             }
@@ -100,13 +100,10 @@ class create{
 
     function GenerateTable($fileName,$fileLocation){
 
-        $tableName = '$table';
+        $tableName = '{{table}}';
         $replaceName = $fileName;
-        $objectName = '$ob';
-        $replaceObject = '$' . $fileName;
         $str = file_get_contents($fileLocation);
         $str = str_replace("$tableName", "$replaceName", $str);
-        $str = str_replace("$objectName", "$replaceObject", $str);
         return file_put_contents($fileLocation, $str);
     }
 
@@ -119,11 +116,11 @@ class create{
      */
 
 
-    function includeFile($reqFile,$location,$fileName){
-        $current = file_get_contents($reqFile);
-        $current .= "require_once '$location/" . $fileName . ".php';";
-        file_put_contents($reqFile, $current . "\n");
-    }
+//    function includeFile($reqFile,$location,$fileName){
+//        $current = file_get_contents($reqFile);
+//        $current .= "require_once '$location/" . $fileName . ".php';";
+//        file_put_contents($reqFile, $current . "\n");
+//    }
 
     /**
      * Check connection string 

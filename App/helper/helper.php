@@ -19,6 +19,7 @@ trait helper
     }
 
 
+
     /**
      * use mysqli
      * System::Set('db',new mysqli());

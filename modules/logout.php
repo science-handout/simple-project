@@ -6,9 +6,8 @@
  */
 
 require_once "../start.php";
-require_once "../App/permission/permission.php";
-$session->start();
-new permission('admin','permission','','logout','');
+session::start();
+permission::start('admin','permission','','logout','');
 
 
 

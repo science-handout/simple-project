@@ -6,38 +6,37 @@
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 
-$ob = new $table();
 
-class $table {
+class {{table}} {
 
 
-function insert($dataArray)
+public static function insert($dataArray)
 {
-    if(System::Get('db')->Insert('$table',$dataArray))
+    if(System::Get('db')->Insert('{{table}}',$dataArray))
         return true;
 
     return false;
 }
 
-function update($id,$dataArray)
+public static function update($id,$dataArray)
 {
-    if(System::Get('db')->Update('$table',$dataArray,"WHERE `id`=$id"))
+    if(System::Get('db')->Update('{{table}}',$dataArray,"WHERE `id`=$id"))
         return true;
 
     return false;
 }
 
-function delete($id)
+public static function delete($id)
 {
-    if(System::Get('db')->Delete('$table',"WHERE `id`=$id"))
+    if(System::Get('db')->Delete('{{table}}',"WHERE `id`=$id"))
         return true;
 
     return false;
 }
 
-function select($extra='')
+public static function select($extra='')
 {
-    System::Get('db')->Execute("SELECT * FROM `$table` $extra");
+    System::Get('db')->Execute("SELECT * FROM `{{table}}` $extra");
 
     if(System::Get('db')->AffectedRows()>0)
         return System::Get('db')->GetRows();

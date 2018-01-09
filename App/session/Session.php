@@ -4,7 +4,7 @@
  * @copyright Copyright (c) mohamed amr
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
-$session =  new Session();
+
 class Session
 {
     public static function Start()
