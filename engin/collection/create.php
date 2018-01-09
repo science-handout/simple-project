@@ -23,7 +23,7 @@ class create{
             if ($type == 'Table') {
                 $res = $this->GenerateTable($file, $fileName);
                 if ($res) {
-                    $this->includeFile('../req.php', 'database', $file);
+                    $this->includeFile('../App/bootstrap/start.php', 'database', $file);
                 }
             }elseif($type == 'Back'){
                 $this->GenerateNav($file,$type);
@@ -121,7 +121,7 @@ class create{
 
     function includeFile($reqFile,$location,$fileName){
         $current = file_get_contents($reqFile);
-        $current .= "require_once '$location/" . $fileName . ".php';";
+        $current .= "require_once '../../$location/" . $fileName . ".php';";
         file_put_contents($reqFile, $current . "\n");
     }
 
