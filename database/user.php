@@ -6,7 +6,6 @@
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 
-$user = new user();
 
 
 class user {
@@ -44,6 +43,11 @@ public static function select($extra='')
         return System::Get('db')->GetRows();
 
     return [];
+}
+
+public function __call($name, $arguments)
+{
+    return "this function [" .$name. "] not found";
 }
 
 }

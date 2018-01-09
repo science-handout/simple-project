@@ -22,15 +22,11 @@ class create{
         if($generate_res) {
             if ($type == 'Table') {
                 $res = $this->GenerateTable($file, $fileName);
-//                if ($res) {
-//                    $this->includeFile('../start.php', 'database', $file);
-//                }
             }elseif($type == 'Back'){
                 $this->GenerateNav($file,$type);
             }
         }
     }
-
 
     /**
      * check type to return file path
@@ -70,21 +66,7 @@ class create{
      */
 
     function Base($type){
-        switch ($type){
-            case 'Back' :
-                $base = "collection/Back/create{$type}.std";
-                break;
-            case 'Front':
-                $base = "collection/Front/create{$type}.std";
-                break;
-            case 'Table':
-                $base = "collection/Table/create{$type}.std";
-                break;
-            case 'DB':
-                $base = "collection/DB/create{$type}.std";
-                break;
-        }
-        return $base;
+        return "collection/{$type}/create{$type}.std";
     }
 
 
@@ -121,20 +103,6 @@ class create{
         return file_put_contents($fileLocation, $str);
     }
 
-
-    /**
-     * to require table class in req file
-     * @param $reqFile
-     * @param $location
-     * @param $fileName
-     */
-
-
-//    function includeFile($reqFile,$location,$fileName){
-//        $current = file_get_contents($reqFile);
-//        $current .= "require_once '$location/" . $fileName . ".php';";
-//        file_put_contents($reqFile, $current . "\n");
-//    }
 
     /**
      * Check connection string 

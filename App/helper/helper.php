@@ -5,8 +5,7 @@
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 
-
-trait helper
+class helper
 {
     /**
      * @param $data
@@ -18,6 +17,15 @@ trait helper
         die();
     }
 
+    /**
+     * @return array
+     */
+    public static function Url(){
+        $urlNow =  $_SERVER['REQUEST_URI'];
+        $urlNow = explode('/', $urlNow);
+        return $urlNow;
+    }
+
 
 
     /**
@@ -27,15 +35,17 @@ trait helper
      * System::Set('db',new PdoDB());
      */
 
-    public static function DataBaseType(){
-        if(!empty(DB_CLASS)){
-            if(DB_CLASS == 'pdo' || DB_CLASS == 'PDO'){
-                System::Set('db',new PdoDB());
-            }elseif(DB_CLASS == 'mysql' || DB_CLASS == 'mysqli' || DB_CLASS == 'Mysql'){
-                System::Set('db',new mysqlDB());
-            }
-        }
-    }
+
+
+//    public static function DataBaseType($DB_CLASS){
+//        if(!empty(DB_CLASS)){
+//            if(DB_CLASS == 'pdo' || DB_CLASS == 'PDO'){
+//                System::Set('db',new PdoDB());
+//            }elseif(DB_CLASS == 'mysql' || DB_CLASS == 'mysqli' || DB_CLASS == 'Mysql'){
+//                System::Set('db',new mysqlDB());
+//            }
+//        }
+//    }
 
 
 
