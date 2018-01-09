@@ -5,11 +5,7 @@
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
  */
 
-require_once "../start.php";
-require_once "../App/permission/permission.php";
-$session->start();
-new permission('admin','permission','','logout','');
+
+require_once "start.php";
 
 
-
-?>

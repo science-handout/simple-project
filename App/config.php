@@ -19,7 +19,7 @@ define('DBTYPE','mysql');
 /**
  * DBNAME is database name
  */
-define('DBNAME','');
+define('DBNAME','test');
 
 /**
  *  HOST database server
@@ -62,40 +62,30 @@ define('IMAG_PATH','../layout/Public/Images/');
  * app path
  */
 
+
+
+//=================================
+//============== files =========
+//=================================
+
 define('APP',dirname(__FILE__));
 
-/**
- * db path
- */
-
 define('db',APP.'/db');
-
-
-/**
- * helper path
- */
 define('helper',APP.'/helper');
-
-/**
- * session path
- */
 define('session',APP.'/session');
-
-/**
- * Upload path
- */
 define('upload',APP.'/upload');
-
-/**
- * validation path
- */
 define('validation',APP.'/validation');
+
+
 
 //=================================
 //============== DBclass =========
 //=================================
 
 define('DB_CLASS','pdo');
+
+
+
 
 //function Config($configName){
 //    if(isset($configName)){
