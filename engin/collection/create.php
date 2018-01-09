@@ -70,7 +70,21 @@ class create{
      */
 
     function Base($type){
-       return "collection/create{$type}.std";
+        switch ($type){
+            case 'Back' :
+                $base = "collection/Back/create{$type}.std";
+                break;
+            case 'Front':
+                $base = "collection/Front/create{$type}.std";
+                break;
+            case 'Table':
+                $base = "collection/Table/create{$type}.std";
+                break;
+            case 'DB':
+                $base = "collection/DB/create{$type}.std";
+                break;
+        }
+        return $base;
     }
 
 
