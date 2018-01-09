@@ -18,41 +18,41 @@
 <body>
     <div id='msgcont'></div>
 
-<!--<div class="container" style="margin-top: 49px;">
-    <h3><?php echo $message; ?></h3>
-    <div class="panel panel-default col-md-8">
-    <form class="form-horizontal" method="post" style="margin-top: 16px;" action="index.php">
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="table"> name:</label>
-            <div class="col-md-5">
-                <input type="text" class="form-control" id="table" placeholder="Enter  name" name="table">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label col-sm-2" for="table">select:</label>
-            <div class="col-md-5">
-            <select class="form-control" name="select">
-                <option value="Table">Table</option>
-                <option value="Back">Admin page</option>
-                <option value="Front">Page</option>
-            </select>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <input type="submit" class="btn btn-default" value="save" />
-            </div>
-        </div>
-    </form>
-</div>
-</div>
--->
+<!--<div class="container" style="margin-top: 49px;">-->
+    <!--<h3><?php echo $message; ?></h3>-->
+    <!--<div class="panel panel-default col-md-8">-->
+    <!--<form class="form-horizontal" method="post" style="margin-top: 16px;" action="index.php">-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label col-sm-2" for="table"> name:</label>-->
+            <!--<div class="col-md-5">-->
+                <!--<input type="text" class="form-control" id="table" placeholder="Enter  name" name="table">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label class="control-label col-sm-2" for="table">select:</label>-->
+            <!--<div class="col-md-5">-->
+            <!--<select class="form-control" name="select">-->
+                <!--<option value="Table">Table</option>-->
+                <!--<option value="Back">Admin page</option>-->
+                <!--<option value="Front">Page</option>-->
+            <!--</select>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<div class="col-sm-offset-2 col-sm-10">-->
+                <!--<input type="submit" class="btn btn-default" value="save" />-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</form>-->
+<!--</div>-->
+<!--</div>-->
+
 
 
 <div class="container">
     <br />
     <form action="#" id="myForm" role="form" data-toggle="validator" method="post" accept-charset="utf-8">
-                
+
     <!-- SmartWizard html -->
     <div id="smartwizard">
         <ul>
@@ -62,9 +62,9 @@
             <li><a href="#step-4">Step 4<br /><small>Admin Page</small></a></li>
             <li><a href="#step-5">Step 5<br /><small>View Page </small></a></li>
             <li><a href="#step-6">Step 6<br /><small>View Page</small></a></li>
-            
+
         </ul>
-        
+
         <div>
             <div id="step-1">
                 <h2>Connection String </h2>
@@ -85,7 +85,7 @@
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
-                
+
             </div>
             <div id="step-2">
                 <h2>Database</h2>
@@ -107,7 +107,7 @@
                                 <option value="Back">Admin page</option>
                                 <option value="Front">Page</option>
                             </select>
-                
+
                         <div class="help-block with-errors"></div>
                     </div>
                 </div>
@@ -115,52 +115,52 @@
             <div id="step-4" class="">
                 <h2>Admin Page</h2>
 
-                
-                
+
+
             </div>
             <div id="step-5" class="">
                 <h2>View Page</h2>
 
-                
-                
+
+
             </div>
             <div id="step-6" class="">
                 <h2>View Page</h2>
 
-                
-                
+
+
             </div>
         </div>
     </div>
-    
+
     </form>
-    
+
 </div>
 
     <!-- Include jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include jQuery Validator plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
-    
+
 
     <!-- Include SmartWizard JavaScript source -->
     <script type="text/javascript" src="../layout/Public/JS/jquery.smartWizard.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
-            
+
             // Toolbar extra buttons
             var btnFinish = $('<button></button>').text('Finish')
                                              .addClass('btn btn-info')
-                                             .on('click', function(){ 
-                                                    if( !$(this).hasClass('disabled')){ 
+                                             .on('click', function(){
+                                                    if( !$(this).hasClass('disabled')){
                                                         var elmForm = $("#myForm");
                                                         if(elmForm){
-                                                            elmForm.validator('validate'); 
+                                                            elmForm.validator('validate');
                                                             var elmErr = elmForm.find('.has-error');
                                                             if(elmErr && elmErr.length > 0){
                                                                 alert('Oops we still have error in the form');
-                                                                return false;    
+                                                                return false;
                                                             }else{
                                                                 alert('Great! we are ready to submit form');
                                                                 elmForm.submit();
@@ -171,16 +171,16 @@
                                                 });
             var btnCancel = $('<button></button>').text('Cancel')
                                              .addClass('btn btn-danger')
-                                             .on('click', function(){ 
-                                                    $('#smartwizard').smartWizard("reset"); 
-                                                    $('#myForm').find("input, textarea").val(""); 
-                                                });                         
-            
-            
-            
+                                             .on('click', function(){
+                                                    $('#smartwizard').smartWizard("reset");
+                                                    $('#myForm').find("input, textarea").val("");
+                                                });
+
+
+
             // Smart Wizard
-            $('#smartwizard').smartWizard({ 
-                    selected: 0, 
+            $('#smartwizard').smartWizard({
+                    selected: 0,
                     theme: 'dots',
                     transitionEffect:'fade',
                     toolbarSettings: {toolbarPosition: 'bottom',
@@ -193,7 +193,7 @@
                                 enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
                             }
                  });
-            
+
             $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
                    var elmForm = $("#form-step-" + stepNumber);
                     if (stepNumber == 0 ) {
@@ -215,32 +215,32 @@
                 }
 
                   if ($('#alertdiv').hasClass('errdon')) {
-                           $('.sw-btn-prev').click();    
+                           $('.sw-btn-prev').click();
                     }
-                // stepDirection === 'forward' :- this condition allows to do the form validation 
+                // stepDirection === 'forward' :- this condition allows to do the form validation
                 // only on forward navigation, that makes easy navigation on backwards still do the validation when going next
                 if(stepDirection === 'forward' && elmForm ){
-                    elmForm.validator('validate'); 
+                    elmForm.validator('validate');
                     var elmErr = elmForm.children('.has-error');
                     if(elmErr && elmErr.length > 0  ){
                         // Form validation failed
-                        return false;    
+                        return false;
                     }
                 }
                 return true;
             });
-            
+
             $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection) {
                 // Enable finish button only on last step
-                if(stepNumber == 3){ 
-                    $('.btn-finish').removeClass('disabled');  
+                if(stepNumber == 3){
+                    $('.btn-finish').removeClass('disabled');
                 }else{
                     $('.btn-finish').addClass('disabled');
                 }
-            });                               
-            
-        });   
-    </script>  
+            });
+
+        });
+    </script>
 
 </body>
 </html>

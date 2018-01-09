@@ -12,7 +12,7 @@ $user = new user();
 class user {
 
 
-function insert($dataArray)
+public static function insert($dataArray)
 {
     if(System::Get('db')->Insert('user',$dataArray))
         return true;
@@ -20,7 +20,7 @@ function insert($dataArray)
     return false;
 }
 
-function update($id,$dataArray)
+public static function update($id,$dataArray)
 {
     if(System::Get('db')->Update('user',$dataArray,"WHERE `id`=$id"))
         return true;
@@ -28,7 +28,7 @@ function update($id,$dataArray)
     return false;
 }
 
-function delete($id)
+public static function delete($id)
 {
     if(System::Get('db')->Delete('user',"WHERE `id`=$id"))
         return true;
@@ -36,7 +36,7 @@ function delete($id)
     return false;
 }
 
-function select($extra='')
+public static function select($extra='')
 {
     System::Get('db')->Execute("SELECT * FROM `user` $extra");
 

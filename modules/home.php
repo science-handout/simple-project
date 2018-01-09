@@ -10,9 +10,7 @@ session::start();
 //$data = array('user'=>'ahmed','pass'=>'123');
 //session::set('admin',$data);
 
-permission::start('admin','permission','header','','footer');
-
-
+permission::start('admin','permission','','','');
 
 
 if($_GET['action'] == 'add'){
@@ -33,7 +31,7 @@ if($_GET['action'] == 'add'){
 }else{
 //index
 
-  helper::dd($user->select());
+
 
 }
 

@@ -29,10 +29,10 @@ function __autoload($class_name)
         require_once db.'/DBcore/'. $class_name . '.php';
     }elseif (file_exists(validation.'/translate/'. $class_name . '.php')){
         require_once validation.'/translate/'. $class_name . '.php';
+    }elseif (file_exists('../database/'.$class_name.'.php')){
+        require_once '../database/'.$class_name.'.php';
     }
 }
-
 //******************** init database type ****************
 helper::DataBaseType();
 //****************database file **************************
-require_once 'database/user.php';
