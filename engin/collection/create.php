@@ -18,6 +18,7 @@ class create{
     {
         $fileName = $this->CheckType($type, $file);
         $basicFile = $this->Base($type);
+
         $generate_res = $this->GenerateFile($fileName, $basicFile);
         if($generate_res) {
             if ($type == 'Table') {
@@ -39,7 +40,7 @@ class create{
         if($type == 'Back') {
             $file = "../modules/" . $file . ".php";
         }elseif($type == 'Front'){
-            $file = '../../'.$file . ".php";
+            $file = '../'.$file . ".php";
         }elseif($type == 'Table'){
             $file = "../database/" . $file . ".php";
         }
