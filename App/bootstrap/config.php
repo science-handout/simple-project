@@ -17,7 +17,7 @@ define('DBTYPE','mysql');
 /**
  * DBNAME is database name
  */
-define('DBNAME','test');
+define('DBNAME','');
 
 /**
  *  HOST database server
@@ -84,18 +84,5 @@ define('upload',APP.'/upload');
 define('validation',APP.'/validation');
 define('permission',APP.'/permission');
 
-//function Config($configName){
-//    if(isset($configName)){
-//        return $configName;
-//    }else{
-//        return APP;
-//    }
-//}
-//
-//function LoadConfig($configName,$path = ''){
-//    if(isset($configName) && isset($path)){
-//        $configName = include ("$path");
-//    }
-//    return $configName;
-//}
+
 
