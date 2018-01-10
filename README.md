@@ -26,7 +26,7 @@
 ## الاستخدام 
 ```sh
 الدخول عل المسار التالي 
- inc->db->config.php
+ App->bootstrap->config.php
 تكتب اسم قاعدة البيانات  مكان كلمة هنا 
 define('DBNAME','هنا');
 ```
