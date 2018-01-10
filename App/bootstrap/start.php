@@ -38,3 +38,4 @@ function __autoload($class_name)
     }
 }
 System::Set('db',new PdoDB());
+
