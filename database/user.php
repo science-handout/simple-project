@@ -40,9 +40,11 @@ public static function select($extra='')
     System::Get('db')->Execute("SELECT * FROM `user` $extra");
 
     if(System::Get('db')->AffectedRows()>0)
-        return System::Get('db')->GetRows();
-
-    return [];
+        $arr =  System::Get('db')->GetRows();
+    if(!empty($extra)){
+        return $arr[0];
+    }
+    return $arr;
 }
 
 public function __call($name, $arguments)

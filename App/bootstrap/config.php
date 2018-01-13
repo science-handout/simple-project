@@ -40,39 +40,61 @@ define('PASS','');
 //============== paths ===========
 //=================================
 
-/**
- *  CSS_PATH
- */
-
-define('CSS_PATH','../layout/Public/CSS/');
-
-/**
- *  JS PATT
- */
-
-define('JS_PATH','../layout/Public/JS/');
-
-/**
- *  images path
- */
-
-define('IMAG_PATH','../layout/Public/Images/');
-
-/**
- * app path
- */
-
-//=================================
-//============== files ============
-//=================================
 $urlNow =  $_SERVER['REQUEST_URI'];
 $urlNow = explode('/', $urlNow);
 if($urlNow[2] == "modules"){
     $app = "../App";
     $db = "../database";
+    /**
+     *  CSS_PATH
+     */
+
+    define('CSS_PATH','../layout/Public/CSS/');
+
+    /**
+     *  JS PATT
+     */
+
+    define('JS_PATH','../layout/Public/JS/');
+
+    /**
+     *  images path
+     */
+
+    define('IMAG_PATH','../layout/Public/Images/');
+
+    /**
+     * upload path
+     */
+
+    define('UPLOAD_PATH','../layout/Public/Upload/');
 }else{
     $app = "App";
     $db = "database";
+    /**
+     *  CSS_PATH
+     */
+
+    define('CSS_PATH','layout/Public/CSS/');
+
+    /**
+     *  JS PATT
+     */
+
+    define('JS_PATH','layout/Public/JS/');
+
+    /**
+     *  images path
+     */
+
+    define('IMAG_PATH','layout/Public/Images/');
+
+    /**
+     * upload path
+     */
+
+    define('UPLOAD_PATH','layout/Public/Upload/');
+
 }
 define('APP',"$app");
 define('database',"$db");
