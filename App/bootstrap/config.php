@@ -17,7 +17,7 @@ define('DBTYPE','mysql');
 /**
  * DBNAME is database name
  */
-define('DBNAME','test');
+define('DBNAME','');
 
 /**
  *  HOST database server
