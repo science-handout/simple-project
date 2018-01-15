@@ -9,7 +9,7 @@ require_once '../App/bootstrap/start.php';
 
 session::start();
 
-permission::start('admin','permission','header','{{file}}','footer');
+permission::start('admin','permission','{{file}}');
 
 
 if($_GET['action'] == 'add'){
@@ -33,7 +33,10 @@ if($_GET['action'] == 'add'){
 
 }
 
-require_once "../layout/Back/{{file}}.php"
+require_once "../layout/Back/header.html";
+require_once "../layout/Back/{{file}}.php";
+require_once "../layout/Back/footer.html";
+
 
 
 ?>

@@ -7,11 +7,11 @@
 class permission {
 
 
-    public static function start($session_name,$error,$header,$content,$footer)
+    public static function start($session_name,$error,$content)
     {
 
         $resLogin = permission::IsLogin($session_name);
-        permission::Display($error,$header,$content,$footer,$resLogin);
+        permission::Display($error,$content,$resLogin);
 
     }
 
@@ -27,7 +27,7 @@ class permission {
 
 
 
-    public static function Display($error = '',$header = '',$content = '',$footer = '',$resLogin)
+    public static function Display($error = '',$content = '',$resLogin)
     {
 
         if ($content == 'login') {
@@ -51,11 +51,6 @@ class permission {
                 $message = 'you are not login';
                 ($error) ? require_once "../layout/Back/Errors/" . $error . ".html" : '';
                 exit();
-
-            } else {
-                ($header) ? require_once "../layout/Back/" . $header . ".html" : '';
-                ($content) ? require_once "../layout/Back/" . $content . ".php" : '';
-                ($footer) ? require_once "../layout/Back/" . $footer . ".html" : '';
             }
         }
     }
