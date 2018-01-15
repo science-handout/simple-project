@@ -11,9 +11,7 @@ session::start();
 //$d = array('s'=>'s');
 //session::Set('admin',$d);
 
-permission::start('admin','permission','header','home','footer');
-
-
+permission::start('admin','permission','home');
 if($_GET['action'] == 'add'){
 //add
 
@@ -33,10 +31,13 @@ if($_GET['action'] == 'add'){
 //index
 
 
+
+
 }
 
-require_once "../layout/Back/home.php"
-
+require_once "../layout/Back/header.html";
+require_once "../layout/Back/home.php";
+require_once "../layout/Back/footer.html";
 
 ?>
 
