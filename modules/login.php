@@ -6,7 +6,7 @@
  */
 require_once '../App/bootstrap/start.php';
 session::start();
-permission::start('admin','permission','','login','');
+permission::start('admin','permission','login');
 
 
 if(isset($_POST['password'])){
