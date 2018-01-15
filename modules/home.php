@@ -3,14 +3,15 @@
  * simple creation project
  * @copyright Copyright (c) mohamed amr
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
+ * php file
  */
-
 require_once '../App/bootstrap/start.php';
+
 session::start();
+//$d = array('s'=>'s');
+//session::Set('admin',$d);
 
-
-
-permission::start('admin','permission','','','');
+permission::start('admin','permission','header','home','footer');
 
 
 if($_GET['action'] == 'add'){
@@ -32,8 +33,9 @@ if($_GET['action'] == 'add'){
 //index
 
 
-
 }
+
+require_once "../layout/Back/home.php"
 
 
 ?>

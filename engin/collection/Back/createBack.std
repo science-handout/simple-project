@@ -3,12 +3,13 @@
  * simple creation project
  * @copyright Copyright (c) mohamed amr
  * @license https://github.com/science-handout/simple-project/blob/master/LICENSE (MIT License)
+ * php file
  */
 require_once '../App/bootstrap/start.php';
 
 session::start();
 
-permission::start('admin','permission','header','','footer');
+permission::start('admin','permission','header','{{file}}','footer');
 
 
 if($_GET['action'] == 'add'){
@@ -31,6 +32,9 @@ if($_GET['action'] == 'add'){
 
 
 }
+
+require_once "../layout/Back/{{file}}.php"
+
 
 ?>
 

@@ -54,7 +54,7 @@ class permission {
 
             } else {
                 ($header) ? require_once "../layout/Back/" . $header . ".html" : '';
-                ($content) ? require_once "../layout/Back/" . $content . ".html" : '';
+                ($content) ? require_once "../layout/Back/" . $content . ".php" : '';
                 ($footer) ? require_once "../layout/Back/" . $footer . ".html" : '';
             }
         }

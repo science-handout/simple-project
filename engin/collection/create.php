@@ -22,9 +22,13 @@ class create{
         $generate_res = $this->GenerateFile($fileName, $basicFile);
         if($generate_res) {
             if ($type == 'Table') {
-                $res = $this->GenerateTable($file, $fileName);
+                $res = $this->RenameFile($file, $fileName,'{{table}}');
             }elseif($type == 'Back'){
                 $this->GenerateNav($file,$type);
+                $generate = "../layout/Back/" . $file . ".php";
+                $basicDesignFile = "collection/Back/designBack.std";
+                $this->GenerateFile($generate, $basicDesignFile);
+                $res = $this->RenameFile($file, $fileName,'{{file}}');
             }
         }
     }
@@ -52,8 +56,11 @@ class create{
 
         if($type == 'Back'){
             $current = file_get_contents("../layout/Back/nav.php");
-            $current .= "<li class='nav-item'>";
-            $current .= "<a class='nav-link' href='{$title}.php'>{$title}</a>";
+            $current .= "<li class=\"nav-item\" data-toggle=\"tooltip\" data-placement=\"right\" title=\"{$title}\">";
+            $current .= "<a class='nav-link'  href='{$title}.php'>";
+            $current .= "<i class=\"fa fa-fw fa-angle-left\"></i>";
+            $current .= "<span class=\"nav-link-text\">{$title}</span>";
+            $current.="  </a>";
             $current .= "</li>";
             file_put_contents("../layout/Back/nav.php", $current . "\n");
         }
@@ -95,9 +102,9 @@ class create{
      * @return int
      */
 
-    function GenerateTable($fileName,$fileLocation){
+    function RenameFile($fileName,$fileLocation,$rename){
 
-        $tableName = '{{table}}';
+        $tableName = "$rename";
         $replaceName = $fileName;
         $str = file_get_contents($fileLocation);
         $str = str_replace("$tableName", "$replaceName", $str);
