@@ -7,8 +7,10 @@
 
 require_once '../App/bootstrap/start.php';
 session::start();
-permission::start('admin','permission','','logout','');
+permission::start('admin','permission','logout');
 
+
+    header('Location: login.php');
 
 
 ?>
